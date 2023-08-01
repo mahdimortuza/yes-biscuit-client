@@ -9,7 +9,7 @@ const Bookings = () => {
     const navigate = useNavigate()
 
 
-    const url = `http://localhost:5000/bookings?email=${user.email}`;
+    const url = `https://yes-biscuit-server.vercel.app/bookings?email=${user.email}`;
 
     useEffect(() => {
         fetch(url, {
@@ -31,7 +31,7 @@ const Bookings = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Are you sure you want to delete?");
         if (proceed) {
-            fetch(`http://localhost:5000/bookings/${id}`, { method: "DELETE" })
+            fetch(`https://yes-biscuit-server.vercel.app/bookings/${id}`, { method: "DELETE" })
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
@@ -44,7 +44,7 @@ const Bookings = () => {
     };
 
     const handleBookingConfirm = id => {
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://yes-biscuit-server.vercel.app/bookings/${id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"

@@ -8,7 +8,7 @@ const Services = () => {
     const [search, setSearch] = useState('')
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services?search=${search}&sort=${asc ? 'asc' : 'desc'}`)
+        fetch(`https://yes-biscuit-server.vercel.app/services?search=${search}&sort=${asc ? 'asc' : 'desc'}`)
             .then(res => res.json())
             .then(data => setServices(data))
     }, [asc, search])
@@ -24,7 +24,7 @@ const Services = () => {
             <div className="text-center">
                 <h3 className="text-2xl font-bold text-orange-600">Cookies</h3>
                 <h2 className="text-4xl font-bold">Our Cookies Area</h2>
-                <p className="">As you explore our virtual cookie wonderland, we invite you <br></br> to experience the joy and nostalgia that our cookies bring. </p>
+                <p className="">If you o not get the cookies data please refresh several times. <br></br> It is a problem of vercel server and IDK why they do not solve this issue. </p>
 
                 <div className="flex justify-between">
                     <div className="form-control">

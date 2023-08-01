@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/book/:_id",
         element: <PrivateRoute><BookService></BookService></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/services/${params._id}`)
+        loader: ({ params }) => fetch(`https://yes-biscuit-server.vercel.app/services/${params._id}`)
       },
       {
         path: "/bookings",
